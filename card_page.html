@@ -1,0 +1,168 @@
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>Be My Girlfriend - Romantic Card</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Montserrat:wght@400;700&display=swap');
+
+  /* Reset and base */
+  * {
+    box-sizing: border-box;
+  }
+  body, html {
+    margin: 0; padding: 0;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #003f7f, #001f3f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* Card container */
+  .card {
+    background: linear-gradient(145deg, #2978b5, #50a7e0);
+    width: 320px;
+    max-width: 90vw;
+    max-height: 560px;
+    padding: 30px 25px 40px 25px;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    color: #f0f8ff;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    user-select: none;
+  }
+
+  /* Romantic hearts background */
+  .hearts {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .heart {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: #ff4d6d;
+    transform: rotate(-45deg);
+    animation: floatUp 7s ease-in infinite;
+    opacity: 0.85;
+    border-radius: 50% 50% 50% 50%;
+    box-shadow: 0 0 8px 2px rgba(255,77,109,0.5);
+  }
+  .heart::before,
+  .heart::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: #ff4d6d;
+    border-radius: 50%;
+  }
+  .heart::before {
+    top: -11px;
+    left: 0;
+  }
+  .heart::after {
+    left: 11px;
+    top: 0;
+  }
+
+  /* Animate hearts floating */
+  @keyframes floatUp {
+    0% {
+      transform: translateY(0) rotate(-45deg);
+      opacity: 0.85;
+    }
+    50% {
+      opacity: 0.4;
+    }
+    100% {
+      transform: translateY(-270px) rotate(-45deg);
+      opacity: 0;
+    }
+  }
+
+  /* Hearts positions and delays */
+  .heart:nth-child(1) { left: 15%; animation-delay: 0s; animation-duration: 7.2s; }
+  .heart:nth-child(2) { left: 55%; animation-delay: 2.5s; animation-duration: 8.5s; }
+  .heart:nth-child(3) { left: 85%; animation-delay: 5s; animation-duration: 6.8s; }
+  .heart:nth-child(4) { left: 35%; animation-delay: 1.3s; animation-duration: 7.8s; }
+  .heart:nth-child(5) { left: 70%; animation-delay: 3.7s; animation-duration: 7.1s; }
+
+  /* Card content */
+  h1 {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 12px;
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+  }
+  p.message {
+    font-size: 1.3rem;
+    margin-bottom: 35px;
+    color: #f5faff;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+  }
+  .sender {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #d3e5ff;
+    margin-top: 45px;
+  }
+
+  /* Button */
+  .btn-share {
+    background: #ffffffcc;
+    color: #004080;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 34px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.7);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .btn-share:hover, .btn-share:focus {
+    background: #003366;
+    color: #ffffff;
+    outline: none;
+  }
+
+  /* Responsive tweaks for mobile */
+  @media (max-width: 400px) {
+    .card {
+      width: 90vw;
+      padding: 25px 20px 30px 20px;
+    }
+    h1 {
+      font-size: 2.6rem;
+    }
+    p.message {
+      font-size: 1.15rem;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="card" role="main" aria-label="Be My Girlfriend Romantic Card">
+  <div class="hearts" aria-hidden="true" >
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+  </div>
+  <h1>Faldoy GirlFriends Card-</h1>
+  <p class="message">From the moment I met you, my heart has known its home. Will you do me the honor of being my girlfriend and making every day a beautiful adventure together?</p>
+  <p class="sender">❤️ With all my love, Yours truly</p>
+ 
